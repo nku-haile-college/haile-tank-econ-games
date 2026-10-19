@@ -188,6 +188,16 @@ nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{padding-bottom:24px;color:var(--muted)}
 
+/* photo band */
+.photo-band{margin:0;position:relative;background:var(--sign);overflow:hidden}
+.photo-band img{display:block;width:100%;max-width:100%;height:clamp(300px,46vw,620px);object-fit:cover;object-position:50% 45%}
+.photo-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,14,15,0) 40%,rgba(13,14,15,.88) 100%);pointer-events:none}
+.photo-band figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;color:#f1f1ee}
+.photo-band figcaption .wrap{padding-block:clamp(20px,4vw,40px);display:grid;gap:8px}
+.photo-band .cap-line{font:800 clamp(1.8rem,5vw,3.6rem)/.95 var(--display);text-transform:uppercase;max-width:18ch;text-wrap:balance}
+.photo-band .cap-line em{font-style:normal;color:var(--gold)}
+.photo-band .eyebrow{color:#c9cac6}
+
 /* presented by */
 .presented{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;padding-top:28px;border-top:1px solid #2b2e31}
 .presented .eyebrow{color:#9ea3a7}
@@ -319,6 +329,16 @@ footer a:hover{color:var(--gold)}
       </div>
     </div>
   </section>
+
+  <figure class="photo-band">
+    <img src="assets/students-presenting.jpg" alt="A team of four NKU students in suits presents financial analysis to a room of judges and classmates at Northern Kentucky University" width="1800" height="900" loading="lazy">
+    <figcaption>
+      <div class="wrap">
+        <span class="eyebrow">Friday, February 5 · Final round</span>
+        <p class="cap-line">Eight minutes. <em>Your recommendation.</em> Real judges.</p>
+      </div>
+    </figcaption>
+  </figure>
 
   <section id="problems">
     <div class="wrap">
